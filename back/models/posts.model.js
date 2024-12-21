@@ -2,10 +2,20 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const postSchema = new Schema({
-    title: String,
-    content: String,
-    summary: String,
+    title: {
+        type: String,
+        required: true,
+    },
+    content: {
+        type: String,
+        required: true,
+    },
+    summary: {
+        type: String,
+        required: true,
+    },
     cover: String,
+    coverCloudinaryId: String,
 }, {
     timestamps: true,
 })
