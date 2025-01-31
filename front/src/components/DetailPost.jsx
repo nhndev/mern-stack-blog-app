@@ -43,7 +43,7 @@ function DetailPost() {
             <p className="edit-btn" onClick={onDelete}><FaDeleteLeft /> Delete</p>
             <h4>{post?.summary}</h4>
             <img src={post?.cover} alt={post?.title} />
-            <p>{post?.content}</p>
+            <div dangerouslySetInnerHTML={{__html: post?.content}} />
         </Container>
         </>
     )

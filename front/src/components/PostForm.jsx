@@ -4,7 +4,8 @@ import Row from "react-bootstrap/esm/Row";
 import Spinner from 'react-bootstrap/Spinner';
 import httpClient from "../http/httpClient";
 import { useNavigate, useParams } from 'react-router-dom'
-
+import { Editor } from '@tinymce/tinymce-react';
+ 
 function PostForm() {
     const param = useParams();
 
@@ -83,7 +84,11 @@ function PostForm() {
                 </Row>
                 <Row className="mt-3">
                     <div className="col-12">
-                        <textarea rows="10" className="form-control" placeholder="Content" value={content} onChange={(e) => setContent(e.target.value)} />
+                        <Editor
+                            apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
+                            value={content}
+                            onEditorChange={(newValue) => setContent(newValue)}
+                        />
                     </div>
                 </Row>
                 <Row className="mt-3">
