@@ -1,0 +1,33 @@
+.post-item {
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.post-item img {
+    width: 100%;
+    height: auto;
+}
+
+.post-item title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.post-item .read-more {
+   color: #32383e;
+   text-decoration: underline;
+   margin-top: auto;
+}
+
+.post-item .read-more:hover {
+    color: #3f85cb;
+}
+
+.edit-btn {
+    font-size: 28px;
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    color: #f4531d;
+}
